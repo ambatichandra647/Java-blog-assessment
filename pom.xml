@@ -8,9 +8,9 @@
 	<!--  lookup parent from repository  -->
 </parent>
 <groupId>com.javaguides</groupId>
-<artifactId>springboot-restful-webservices</artifactId>
+<artifactId>java-blog-assessment</artifactId>
 <version>0.0.1-SNAPSHOT</version>
-<name>springboot-restful-webservices</name>
+<name>java-blog-assessment</name>
 <description>Demo project for Spring Boot</description>
 <properties>
 	<java.version>1.8</java.version>
