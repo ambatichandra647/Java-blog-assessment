@@ -17,13 +17,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.blog.entity.User;
-import com.pages.blog.payload.request.LoginRequest;
-import com.pages.blog.payload.request.SignupRequest;
-import com.pages.blog.payload.response.MessageResponse;
-import com.pages.blog.payload.response.UserInfoResponse;
-import com.pages.blog.repository.UserRepository;
-import com.pages.blog.security.jwt.JwtUtils;
-import com.pages.blog.security.services.UserDetailsImpl;
+import com.blog.payload.request.LoginRequest;
+import com.blog.payload.request.SignupRequest;
+import com.blog.payload.response.MessageResponse;
+import com.blog.payload.response.UserInfoResponse;
+import com.blog.repository.UserRepository;
+import com.blog.security.jwt.JwtUtils;
+import com.blog.security.services.UserDetailsImpl;
 
 
 @CrossOrigin(origins = "*", maxAge = 3600)

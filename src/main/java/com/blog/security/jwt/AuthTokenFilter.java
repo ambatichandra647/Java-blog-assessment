@@ -1,4 +1,4 @@
-package com.pages.blog.security.jwt;
+package com.blog.security.jwt;
 
 
 import java.io.IOException;
@@ -17,7 +17,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.pages.blog.security.services.UserDetailsServiceImpl;
+import com.blog.security.services.UserDetailsServiceImpl;
 
 public class AuthTokenFilter extends OncePerRequestFilter {
   @Autowired

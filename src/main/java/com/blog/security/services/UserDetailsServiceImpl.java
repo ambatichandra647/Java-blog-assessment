@@ -1,4 +1,4 @@
-package com.pages.blog.security.services;
+package com.blog.security.services;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.blog.entity.User;
-import com.pages.blog.repository.UserRepository;
+import com.blog.repository.UserRepository;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {

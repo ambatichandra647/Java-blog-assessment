@@ -1,4 +1,4 @@
-package com.pages.blog.security.jwt;
+package com.blog.security.jwt;
 
 
 import java.security.Key;
@@ -14,7 +14,7 @@ import org.springframework.http.ResponseCookie;
 import org.springframework.stereotype.Component;
 import org.springframework.web.util.WebUtils;
 
-import com.pages.blog.security.services.UserDetailsImpl;
+import com.blog.security.services.UserDetailsImpl;
 
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;

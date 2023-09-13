@@ -1,4 +1,4 @@
-package com.pages.blog.repository;
+package com.blog.repository;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;

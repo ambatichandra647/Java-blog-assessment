@@ -1,4 +1,4 @@
-package com.pages.security;
+package com.blog.security;
 
 
 
@@ -10,15 +10,16 @@ import org.springframework.security.authentication.dao.DaoAuthenticationProvider
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import com.pages.blog.security.jwt.AuthEntryPointJwt;
-import com.pages.blog.security.jwt.AuthTokenFilter;
-import com.pages.blog.security.services.UserDetailsServiceImpl;
+import com.blog.security.jwt.AuthEntryPointJwt;
+import com.blog.security.jwt.AuthTokenFilter;
+import com.blog.security.services.UserDetailsServiceImpl;
 
 @Configuration
 @EnableMethodSecurity
@@ -65,7 +66,8 @@ public class WebSecurityConfig {
         .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
         .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
         .authorizeHttpRequests(auth -> 
-        auth.antMatchers("/api/auth/**").permitAll()
+        auth.antMatchers("/api/auth/signin").permitAll()
+        	.antMatchers("/api/auth/signout").permitAll()
               .antMatchers("/api/test/**").permitAll()
               .anyRequest().authenticated()
         );
@@ -78,5 +80,11 @@ public class WebSecurityConfig {
     
     return http.build();
   }
+  
+  @Bean
+  public WebSecurityCustomizer webSecurityCustomizer() {
+	  return (web) -> web.ignoring().antMatchers("/api/auth/signup");
+  }
+  
 }
 

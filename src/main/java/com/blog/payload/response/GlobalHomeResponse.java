@@ -1,4 +1,4 @@
-package com.pages.blog.payload.response;
+package com.blog.payload.response;
 
 public class GlobalHomeResponse {
 }

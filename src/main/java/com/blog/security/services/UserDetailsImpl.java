@@ -1,4 +1,4 @@
-package com.pages.blog.security.services;
+package com.blog.security.services;
 
 
 import java.util.Collection;

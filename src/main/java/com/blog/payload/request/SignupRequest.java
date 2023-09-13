@@ -1,4 +1,4 @@
-package com.pages.blog.payload.request;
+package com.blog.payload.request;
 
 
  

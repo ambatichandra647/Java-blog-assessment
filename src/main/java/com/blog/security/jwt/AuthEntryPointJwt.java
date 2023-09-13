@@ -1,4 +1,4 @@
-package com.pages.blog.security.jwt;
+package com.blog.security.jwt;
 
 import java.io.IOException;
 import java.util.HashMap;
