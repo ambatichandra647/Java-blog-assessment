@@ -1,4 +1,4 @@
-package com.blog.service;
+package com.blog.service.impl;
 import java.util.Collection;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -29,7 +29,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 
         if (userOptional.isPresent()) {
         	User user = userOptional.get();
-            return new org.springframework.security.core.userdetails.User(user.getEmail(),
+            return new org.springframework.security.core.userdetails.User(user.getUsername(),
                     user.getPassword(),
                     mapRolesToAuthorities(user.getRoles()));
         }else{
